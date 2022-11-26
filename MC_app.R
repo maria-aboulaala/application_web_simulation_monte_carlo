@@ -19,10 +19,10 @@ library(shinythemes)
 ui <- fluidPage(theme = shinytheme("superhero"),
                 navbarPage(
                  
-                  "My first app",
-                  tabPanel("Navbar 1",
+                  "simulation de monte carlo",
+                  tabPanel("mouvement brownien",
                            sidebarPanel(
-                             tags$h3("Input:"),
+                             tags$h3("Entrer les parametres:"),
                              textInput("txt1", "Given Name:", ""),
                              textInput("txt2", "Surname:", ""),
                              
@@ -36,8 +36,10 @@ ui <- fluidPage(theme = shinytheme("superhero"),
                            ) # mainPanel
                            
                   ), # Navbar 1, tabPanel
-                  tabPanel("Navbar 2", "This panel is intentionally left blank"),
-                  tabPanel("Navbar 3", "This panel is intentionally left blank")
+                  tabPanel("mouvement brownien geometrique", "This panel is intentionally left blank"),
+                  
+                  
+                  tabPanel("Monte Carlo sim", "This panel is intentionally left blank")
                   
                 ) # navbarPage
 ) # fluidPage
