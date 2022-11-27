@@ -10,7 +10,7 @@ st.markdown(
 > Cette presentation est faite dans le cadre du projet du module Processuss Stochastique, et vise a realiser les simulations suivantes:
 - Simulation du mouvement Brownien Standard
 - Simulation du mouvement Brownien geometrique
-- simulation de Monte Carlo
+- Simulation de Monte Carlo
 - Simulation du Put et du Call Europeen
 ---
    """

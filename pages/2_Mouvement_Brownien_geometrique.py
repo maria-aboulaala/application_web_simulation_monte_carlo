@@ -20,11 +20,11 @@ st.markdown("""
     )
 
 with st.form(key="my_form"):
-    mu = st.number_input('mu', step=0.1)
-    sigma = st.number_input('Donner la volatilité $\mu$', step=0.1)
-    M = st.number_input('Donner le nombre de simalation', step=1)
-    S0 = st.number_input('Le prix initil du stock', step=1, min_value=200)
-    n = st.number_input('Donner la periode', step=1, min_value=50)
+    mu = st.number_input('mu', step=0.1,min_value=0.1)
+    sigma = st.number_input('la volatilité $\mu$', step=0.1, min_value=0.1)
+    M = st.number_input('le nombre de simalation', step=1,min_value=1)
+    S0 = st.number_input('Le prix initil du stock', step=1, min_value=1)
+    n = st.number_input('La periode', step=1, min_value=50)
     st.form_submit_button("Simuler")
 
 
@@ -60,3 +60,14 @@ st.line_chart(St, use_container_width=True)
 st.subheader("Appercu des valeurs generé :1234:")
 
 st.write(St)
+
+
+
+st.markdown(
+    """
+---
+
+ Realisé par Aboulaala Maria                  
+ Encadré par Pr. Brahim Elassri
+    """
+)

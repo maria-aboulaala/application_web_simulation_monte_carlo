@@ -14,3 +14,11 @@ with st.expander("Introduction:"):
                 
                 """)
 
+st.markdown(
+    """
+---
+
+ Realisé par Aboulaala Maria                  
+ Encadré par Pr. Brahim Elassri
+    """
+)

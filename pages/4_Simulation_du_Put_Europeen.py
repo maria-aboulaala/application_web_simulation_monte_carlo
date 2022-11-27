@@ -46,3 +46,11 @@ stock_data = yf.download(
 st.dataframe(stock_data, use_container_width=True)
 
 
+st.markdown(
+    """
+---
+
+ Realisé par Aboulaala Maria                  
+ Encadré par Pr. Brahim Elassri
+    """
+)

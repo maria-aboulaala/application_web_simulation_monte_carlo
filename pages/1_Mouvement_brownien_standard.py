@@ -23,8 +23,8 @@ with st.expander("Introduction:"):
 
 st.write('Entrer le parametres de la simulation')
 with st.form(key="my_form"):
-    d = st.number_input('Donner le nombre de simulation', step=1,min_value=1 )
-    n = st.number_input('Donner la periode', step=1, min_value=200)
+    d = st.number_input('Le nombre de simulation', step=1,min_value=1 )
+    n = st.number_input('La periode', step=1, min_value=200)
     
 
     st.form_submit_button("Simuler")
@@ -54,6 +54,13 @@ st.write(B)
 
 
 
+st.markdown(
+    """
+---
 
+ Realisé par Aboulaala Maria                  
+ Encadré par Pr. Brahim Elassri
+    """
+)
 
 
