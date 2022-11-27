@@ -7,6 +7,7 @@ st.set_page_config(page_icon="🐤", page_title="Aboulaala Maria")
 st.header('Simulation du mouvement brownien standard')
 
 with st.expander("Introduction:"):
+    
     st.markdown("""
 
                 Soit ( $\Omega$, $\mathcal{F}$, $\mathbb{F}$, $\mathcal{P}$) un espace probabilisé filtré  
@@ -24,23 +25,15 @@ with st.expander("Introduction:"):
                 specified in degrees Kelvin.
                 """)
 
-
+st.write('Entrer le parametres de la simulation')
 with st.form(key="my_form"):
     d = st.number_input('Donner le nombre de simulation', step=1)
     n = st.number_input('Donner le temps', step=1, min_value=200)
     
 
     st.form_submit_button("Simuler")
-
-
-
-
-
-
  #nbr de simulation
 T=4
-
-
 
 times = np.linspace(0. , T, n)
 dt = times[1] - times[0]
