@@ -3,32 +3,28 @@ import pandas as pd
 import matplotlib.pyplot as plt
 import numpy as np
 
-st.set_page_config(page_icon="🐤", page_title="Aboulaala Maria")
-st.header('Simulation du mouvement brownien standard')
+st.set_page_config(page_icon=":game_die:", page_title="Aboulaala Maria")
+st.header(':one: Simulation du mouvement brownien standard')
 
 with st.expander("Introduction:"):
     
     st.markdown("""
 
-                Soit ( $\Omega$, $\mathcal{F}$, $\mathbb{F}$, $\mathcal{P}$) un espace probabilisé filtré  
-                Un mouvement brownien  \{$W_t$: t$\geq$0\} avec $\mu$=0 et $\sigma$=1 est appelé mouvement brownien standard. Dans ce cas $W_t$ a une moyenne 0 et une variance t.
-                N’importe quel mouvement brownien \{$W_t$: t$\geq$0\} de d´erive $\mu$
-                st.latex(et de variance $\sigma^2$ peut alors s’´ecrire $W_t$ = $\mu$t + $\sigma$Z_t$ \{$Z_t$: t$\geq$0\} est un mouvement brownien standard.)
-                For an indication of uncertainty, the following 1-$\sigma$ errors
-                were observed when comparing model predictions to an independent
-                test set of experimental observations:
-                - Glass transition temperature: 19 K
-                - Density: 0.02 g/cm\u00b3
-                - Optical refractive index: 0.006
-                - Configurational entropy: 0.9 J/(mol K)
-                The Vogel-Fulcher-Tammann (VFT) equation given assumes that $T$ is
-                specified in degrees Kelvin.
-                """)
+                Soit ( $\Omega$, $\mathcal{F}$, $\mathbb{F}$, $\mathcal{P}$) un espace probabilisé filtré \n
+                Un processus stochastique W : [0, +$\infty$[ \times $\mathbb{R}$ $\longrightarrow$ $\mathbb{R}$ est mouvement brownien standard si: \n
+                - $W_0$ = 0
+                - Pour tout s$\leq$t , $W_t$ - $W_{t-1}$ suit la loi $\mathcal{N}$(0,t-s)
+                - Pour tout n$\geq$1 , et tous $t_0$ = 0 < $t_1$ < ...< $t_n$, les accroissement ($W_{{t_i}+1}$ - $W_{t_i}$ : 0 $\leq$ i $\leq$ n-1) sont **independantes**.
+                En d'autres termes, pour tout $t_0$, $W_t$ $\sim$ $\mathcal{N}$(0,t), les trajectoires de $W_t$ ,  $t_0$ sont presque surement continues.
+
+                
+                """
+    )
 
 st.write('Entrer le parametres de la simulation')
 with st.form(key="my_form"):
-    d = st.number_input('Donner le nombre de simulation', step=1)
-    n = st.number_input('Donner le temps', step=1, min_value=200)
+    d = st.number_input('Donner le nombre de simulation', step=1,min_value=1 )
+    n = st.number_input('Donner la periode', step=1, min_value=200)
     
 
     st.form_submit_button("Simuler")
@@ -47,8 +43,9 @@ st.set_option('deprecation.showPyplotGlobalUse', False)
 
 #st.pyplot(figure)
 
-
+st.subheader("Graphe generé :star2: ")
 st.line_chart(B, use_container_width=True)
+st.subheader("Appercu des valeurs generé :1234:")
 st.write(B)
 #st._arrow_line_chart(B)
 
