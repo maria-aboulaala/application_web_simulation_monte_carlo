@@ -9,7 +9,7 @@ from datetime import datetime, timedelta
 
 st.set_page_config(page_icon="🐤", page_title="Aboulaala Maria")
 
-st.header(':five: Simulation du Call :chart_with_upwards_trend:')
+st.header(':four: Simulation du put :chart_with_upwards_trend:')
 
 with st.expander("Introduction:"):
     
@@ -24,9 +24,8 @@ with st.form(key="my_form"):
     stock_name = st.selectbox(
     'donner le marché',
     ('AAPL', 'MSFT'))
-    #stock_name = st.selectbox(
-    #'donner le ',
-    #('PUT', 'CALL'))
+    nSim = st.number_input('Le prix initil du stock', step=1, min_value=1)
+    
 
     st.form_submit_button("Simuler")
 
@@ -39,6 +38,28 @@ stock_data = yf.download(
     end= end_date
 )
 st.dataframe(stock_data, use_container_width=True)
+
+daily_returns = stock_data['Adj Close'].pct_change(1)
+stock_volatility = daily_returns.std()
+st.write('la volatilité du stock est: ', stock_volatility)
+
+# european option parametre
+stock_price = stock_data['Adj Close'][-1]
+strike_price = stock_price 
+risk_free_rate = 0.04
+maturity = 1.0
+
+
+
+z = np.random.standard_normal(nSim) #brownien motion
+S_fwd = stock_price * np.exp((risk_free_rate-0.5* stock_volatility**2)*maturity + stock_volatility*np.sqrt(maturity)*z)
+payoff = np.maximum(S_fwd - strike_price, 0)
+call = np.exp(-risk_free_rate*maturity) * np.sum(payoff)/nSim  
+
+
+st.write('la valeur du call est', call)
+
+
 
 
 st.markdown(
