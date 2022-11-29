@@ -1,6 +1,6 @@
 import streamlit as st
 import pandas as pd
-import matplotlib.pyplot as plt
+#import matplotlib.pyplot as plt
 import numpy as np
 
 st.set_page_config(page_icon="🐤", page_title="Aboulaala Maria")
@@ -55,8 +55,8 @@ time = np.linspace(0, T, n+1)
 
 tt = np.full(shape=(M, n+1), fill_value=time).T
 
-plt.plot(tt, St)
-plt.show()
+#plt.plot(tt, St)
+#plt.show()
 
 
 st.subheader("Graphe generé :star2:")

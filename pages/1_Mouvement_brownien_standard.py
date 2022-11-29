@@ -1,6 +1,6 @@
 import streamlit as st
 import pandas as pd
-import matplotlib.pyplot as plt
+#import matplotlib.pyplot as plt
 import numpy as np
 
 st.set_page_config(page_icon=":game_die:", page_title="Aboulaala Maria")
@@ -34,8 +34,8 @@ dt = times[1] - times[0]
 dB = np.sqrt(dt)* np.random.normal(size=(n-1,d))
 B0 = np.zeros(shape=(1, d))
 B = np.concatenate((B0, np.cumsum(dB, axis=0)) , axis = 0)
-plt.plot(times, B)
-figure=plt.show()
+#plt.plot(times, B)
+#figure=plt.show()
 
 st.set_option('deprecation.showPyplotGlobalUse', False)
 
