@@ -10,7 +10,7 @@ with st.expander("Introduction:"):
     
     st.markdown("""
 
-    Un processus stochastique est une collectionde variables aleatoires indicées {$W_t$}, ou $t \in T$  
+    Un processus stochastique est une collection de variables aleatoires indicées {$W_t$}, ou $t \in T$  
     Un processus stochastique W : [0, +$\infty$[ x $\mathbb{R}$ $\longrightarrow$ $\mathbb{R}$ est mouvement brownien standard si: \n
     - $W_0$ = 0
     - Pour tout s$\leq$t , $W_t$ - $W_{t-1}$ suit la loi $\mathcal{N}$(0,t-s)
@@ -19,7 +19,7 @@ with st.expander("Introduction:"):
                 """
     )
 
-st.write('Entrer le parametres de la simulation')
+st.subheader('Entrer le parametres de la simulation: :key:')
 with st.form(key="my_form"):
     d = st.number_input('Le nombre de simulation', step=1,min_value=1 )
     n = st.number_input('La periode', step=1, min_value=200)
@@ -61,10 +61,6 @@ figure=plt.show()
 '''
 st.code(code, 
 
-
-
-
-
 language='python')
 
 
@@ -75,7 +71,7 @@ st.markdown(
 ---
 
  Realisé par Aboulaala Maria                  
- Encadré par Pr. Brahim Elassri
+ Encadré par Pr. Brahim El Asri
     """
 )
 

@@ -9,7 +9,7 @@ with st.expander("Objectifs:"):
 
     st.markdown(
     """
-> Cette presentation est faite dans le cadre du projet du module Processuss Stochastique, et vise a realiser les simulations suivantes:
+> Cette presentation est faite dans le cadre du projet du module Processus Stochastique, et vise a realiser les simulations suivantes:
 - Simulation du mouvement Brownien Standard
 - Simulation du mouvement Brownien geometrique
 - Simulation du prix d'un stock avec Monte Carlo
@@ -24,7 +24,7 @@ st.subheader('Introduction')
 st.markdown(
     """
     Pourquoi on simule?
-    >La simulation est un outil de la finance computationnelle. Elle est utilée par exemple dans le simulation du prix d'une action, ou le pricing du put et call (les simulations sont faites dans ce qui suivera), a titre d'exemple la methode de Monte Carlo. \n
+    >La simulation est un outil de la finance computationnelle. Elle est utilée par exemple dans la simulation du prix d'une action, ou le pricing du put et call (les simulations sont faites dans ce qui suivera), a titre d'exemple la methode de Monte Carlo. \n
     Durant cette presentation on s'interesse aux methode de simulation d'une diffusion de la forme: \n
     > d$S_t$ = $\mu$($S_t$)dt +   $\sigma$($S_t$)d$W_t$   \n
     - $S_t$ represente l'evolution de d- sous jacents sur un marché  
@@ -55,7 +55,8 @@ st.markdown(
 ---
 
  Realisé par Aboulaala Maria                  
- Encadré par Pr. Brahim Elassri
+ Encadré par Pr. Brahim El Asri
+ 
     """
 )
 
