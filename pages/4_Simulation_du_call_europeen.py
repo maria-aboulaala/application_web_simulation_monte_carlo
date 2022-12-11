@@ -106,6 +106,6 @@ st.markdown(
 ---
 
  Realisé par Aboulaala Maria                  
- Encadré par Pr. Brahim El Asri
+
     """
 )
